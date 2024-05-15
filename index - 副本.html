@@ -1,0 +1,82 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>CodePen - Solar System animation - Pure CSS</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <!-- partial:index.partial.html -->
+    <div class="description">
+      <h1>郭润泽的个人网站</h1>
+      <hr>
+      <p>:)</p>
+      <img src="https://s21.ax1x.com/2024/05/14/pkmfHns.jpg" height="300" <hr="">
+      <p class="author" style="font-size: 20px ;color: aqua;">
+        感谢 Malik Dellidj 免费提供的太阳系代码
+     </p><p style="font-size: 10px;">下面是代码作者联系方式</p>
+     <textarea style="
+    width: 300px;
+    padding: 5px;
+    font-size: 15px;
+    margin: 15px 0;
+    background: #DCE2F7;
+"></textarea>
+    <button>留言给作者</button>
+    <ul display: inline block;></ul>
+    <script>
+      //1、获取元素
+        var txt = document.querySelector("textarea");
+        var btn = document.querySelector("button");
+        var ul = document.querySelector("ul");
+        //2、给button绑定点击事件
+        btn.onclick = function () {
+            if (txt.value == "") {//当文本框中没有文字时，提示
+                alert("您没有输入内容")
+            } else {
+                //创建元素li作为留言区
+                var li = document.createElement("li");
+                //将文本框中的内容放到li中,a标签中href中的内容代表什么都不执行
+                li.innerHTML = txt.value + "<a href='javascript:;'>删除</a>"
+                txt.value = "";//添加之后文本框的内容清空
+                //将留言添加到ul中，而且在最上方
+                ul.insertBefore(li, ul.children[0]);
+                //当点击删除时删除ul中的li
+                var as = document.querySelectorAll("a");
+                //循环给每个删除绑定事件
+                for (var i = 0; i < as.length; i++) {
+                    as[i].onclick = function () {
+                        //删除当前a标签所在位置的父节点li
+                        ul.removeChild(this.parentNode);
+                    }
+                }
+            }
+        }
+    </script>
+————————————————
+      
+      
+      <p></p>
+      <p class="links">
+        <a class="fa fa-codepen icon" href="https://codepen.io/kowlor/" target="_blank"></a>
+        <a class="fa fa-github-alt icon" href="https://github.com/KOWLOR" target="_blank"></a>
+        <a class="fa fa-twitter icon" href="https://twitter.com/Dathink" target="_blank"></a>
+      </p>
+    </div>
+    <div class="solar-syst">
+      <div class="sun"></div>
+      <div class="mercury"></div>
+      <div class="venus"></div>
+      <div class="earth"></div>
+      <div class="mars"></div>
+      <div class="jupiter"></div>
+      <div class="saturn"></div>
+      <div class="uranus"></div>
+      <div class="neptune"></div>
+      <div class="pluto"></div>
+      <div class="asteroids-belt"></div>
+    </div>
+    <!-- partial -->
+  
+
+  </body></html>

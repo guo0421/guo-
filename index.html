@@ -18,15 +18,42 @@
     <div class="description">
       <h1>郭润泽的个人网站</h1>
       <hr />
+      <div class="main">
+        <span style="display: flex; justify-content: center; class=caidan ;;">联系我</span>
+          <div class="drop"><a href="https://wx.mail.qq.com/login/loginpage?auth_type=3&login_exception=true">QQ:</a>457407865@qq.com</div>
+          <div class="drop"><a href="outlook.com">outlook:</a>457407865@outlook.com</div>
+          <div class="drop"><a href="github.com">github:</a>guo0421</div>
+      </div>
       <p>:)</p>
-      <img src="https://s21.ax1x.com/2024/05/14/pkmfHns.jpg" height="300" <hr />
+      <img src="https://s21.ax1x.com/2024/05/14/pkmfHns.jpg" height="300px"><hr />
       <p class="author" style="font-size: 20px ;color: aqua;">
-        感谢 Malik Dellidj 免费提供的太阳系代码
+       感谢 Malik Dellidj 免费提供的太阳系代码
      <p style="font-size: 10px;">下面是代码作者联系方式</p>
      
-      
-      
-      </p>
+
+
+    </p>
+    <audio id="music" src="鸡你太美_爱给网_aigei_com.mp3" loop autoplay></audio>
+    <img height="20" class=pic1 src="https://s21.ax1x.com/2024/05/16/pkn0Ajf.jpg " onClick="play()" alt="user"> 
+<script>
+window.onload = function(){ 
+     var audio = document.getElementById('music');
+         audio.pause();//打开页面时无音乐
+}
+function play() {
+    var audio = document.getElementById('music');
+    if (audio.paused) {
+        audio.play();
+        document.getElementById('musicImg').src="images/play.png";
+    }else{
+        audio.pause();
+        audio.currentTime = 0;//音乐从头播放
+        document.getElementById('musicImg').src="images/stop.png";
+    }
+}
+</script>
+
+
       <p class="links">
         <a
           class="fa fa-codepen icon"

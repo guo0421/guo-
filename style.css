@@ -1450,8 +1450,15 @@ body {
   clip: rect(0, 900px, 0, 0);
   animation: noise-anim-2 3s infinite linear alternate-reverse;
 }
-.taiyangxi{
-margin: ;
+.jieshao {
+  display: flex;
+  font-size: 24px;
+  margin: 20px;
+  flex-direction: column-reverse;
+  line-height: 4pc;
+  justify-content: flex-end;
+  position: relative;
+  left: 1000px;
 }
 @-webkit-keyframes orb {
   from {

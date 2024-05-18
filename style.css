@@ -1459,6 +1459,7 @@ body {
   justify-content: flex-end;
   position: relative;
   left: 1000px;
+  transform: translateY(-900px)
 }
 @-webkit-keyframes orb {
   from {
